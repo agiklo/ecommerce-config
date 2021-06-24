@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+#postgres production database config
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto= update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    jdbc-url: jdbc:postgresql://localhost:5432/product-catalog-service
+    username: postgres
+    password: root
