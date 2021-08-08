@@ -8,7 +8,7 @@ spring:
     properties:
       hibernate:
         hbm2ddl:
-          auto= update
+          auto: update
   datasource:
     driver-class-name: org.postgresql.Driver
     jdbc-url: jdbc:postgresql://localhost:5432/product-info-service
