@@ -1,5 +1,7 @@
 server:
   port: 8082
+  error:
+    include-message: always
 
 spring:
   data:
@@ -10,3 +12,9 @@ spring:
       database: user-service
       port: 27017
       host: localhost
+
+jwt:
+  private-key: "strongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrong"
+  authorizationHeader: "Authorization"
+  tokenPrefix: "Bearer "
+  tokenExpirationAfterDays: 14
