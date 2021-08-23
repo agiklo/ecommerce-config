@@ -1,2 +1,16 @@
 server:
-  port: 7777
+  port: 8083
+
+#postgres production database config
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    jdbc-url: jdbc:postgresql://localhost:5432/cart-service
+    username: postgres
+    password: root
