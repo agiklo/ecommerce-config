@@ -3,18 +3,16 @@ server:
   error:
     include-message: always
 
+#postgres production database config
 spring:
-  data:
-    mongodb:
-      authentication-database: admin
-      username: rootuser
-      password: rootpass
-      database: user-service
-      port: 27017
-      host: localhost
-
-jwt:
-  private-key: "strongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrongstrong"
-  authorizationHeader: "Authorization"
-  tokenPrefix: "Bearer "
-  tokenExpirationAfterDays: 14
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    jdbc-url: jdbc:postgresql://localhost:5432/user-service
+    username: postgres
+    password: root
